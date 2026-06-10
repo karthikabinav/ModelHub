@@ -14,6 +14,7 @@
 
 from setuptools import find_packages, setup
 
+
 extras = {}
 extras["quality"] = ["ruff == 0.13.1"]
 
@@ -39,7 +40,6 @@ extras["rich"] = ["rich"]
 extras["test_fp8"] = ["torchao"]  # note: TE for now needs to be done via pulling down the docker image directly
 extras["test_trackers"] = [
     "wandb",
-    "comet-ml",
     "tensorboard",
     "dvclive",
     # "mlflow", too many deps that lead to download a very old version of the lib

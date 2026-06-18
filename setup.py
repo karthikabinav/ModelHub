@@ -14,8 +14,10 @@
 
 from setuptools import find_packages, setup
 
+
 extras = {}
 extras["quality"] = ["ruff == 0.13.1"]
+
 extras["docs"] = []
 extras["test_prod"] = ["pytest>=7.2.0", "pytest-xdist", "pytest-subtests", "parameterized", "pytest-order"]
 extras["test_dev"] = [
@@ -46,6 +48,7 @@ extras["test_trackers"] = [
     "trackio",
 ]
 extras["dev"] = extras["quality"] + extras["testing"] + extras["rich"]
+
 extras["sagemaker"] = [
     "sagemaker",  # boto3 is a required package in sagemaker
 ]

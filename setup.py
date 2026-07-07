@@ -14,7 +14,6 @@
 
 from setuptools import find_packages, setup
 
-
 extras = {}
 extras["quality"] = ["ruff == 0.13.1"]
 
@@ -106,7 +105,7 @@ setup(
 # 2. Change the version in __init__.py and setup.py to the proper value.
 # 3. Commit these changes with the message: "Release: v<VERSION>"
 # 4. Add a tag in git to mark the release:
-#      git tag v<VERSION> -m "Adds tag v<VERSION> for pypi"
+#      git tag v<VERSION> -m 'Adds tag v<VERSION> for pypi'
 #    Push the tag and release commit to git: git push --tags origin vXX.xx-release
 # 5. Run the following commands in the top-level directory:
 #      make prepare_release
@@ -119,5 +118,5 @@ setup(
 # 8. Upload the final version to actual pypi:
 #      make target=pypi upload_release
 # 9. Add release notes to the tag in github once everything is looking hunky-dory.
-# 10. Go back to the main branch and update the version in __init__.py, setup.py to the new version ".dev" and push to
+# 10. Go back to the main branch and update the version in __init__.py, setup.py to the new version \".dev\" and push to
 #     main.

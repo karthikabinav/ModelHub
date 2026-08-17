@@ -99,6 +99,7 @@ setup(
     ],
 )
 
+
 # Release checklist
 # 1. Checkout the release branch (for a patch the current release branch, for a new minor version, create one):
 #      git checkout -b vXX.xx-release
@@ -106,7 +107,7 @@ setup(
 # 2. Change the version in __init__.py and setup.py to the proper value.
 # 3. Commit these changes with the message: "Release: v<VERSION>"
 # 4. Add a tag in git to mark the release:
-#      git tag v<VERSION> -m 'Adds tag v<VERSION> for pypi'
+#      git tag v<VERSION> -m Adds tag v<VERSION> for pypi
 #    Push the tag and release commit to git: git push --tags origin vXX.xx-release
 # 5. Run the following commands in the top-level directory:
 #      make prepare_release

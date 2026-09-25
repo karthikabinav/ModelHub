@@ -112,8 +112,10 @@ setup(
 #      make target=testpypi upload_release
 # 7. Check that you can install it in a virtualenv by running:
 #      make install_test_release
+#      accelerate env
+#      accelerate test
 # 8. Upload the final version to actual pypi:
 #      make target=pypi upload_release
 # 9. Add release notes to the tag in github once everything is looking hunky-dory.
-# 10. Go back to the main branch and update the version in __init__.py and setup.py to the new version ".dev" and push to
+# 10. Go back to the main branch and update the version in __init__.py, setup.py to the new version ".dev" and push to
 #     main.

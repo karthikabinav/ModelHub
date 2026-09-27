@@ -17,6 +17,7 @@ from setuptools import find_packages, setup
 
 extras = {}
 extras["quality"] = ["ruff == 0.13.1"]
+
 extras["docs"] = []
 extras["test_prod"] = ["pytest>=7.2.0", "pytest-xdist", "pytest-subtests", "parameterized", "pytest-order"]
 extras["test_dev"] = [
@@ -117,5 +118,5 @@ setup(
 # 8. Upload the final version to actual pypi:
 #      make target=pypi upload_release
 # 9. Add release notes to the tag in github once everything is looking hunky-dory.
-# 10. Go back to the main branch and update the version in __init__.py, setup.py to the new version ".dev" and push to
+# 10. Go back to the main branch and update the version in __init__.py, setup.py to the new version \".dev\" and push to
 #     main.

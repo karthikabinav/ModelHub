@@ -16,7 +16,9 @@ from setuptools import find_packages, setup
 
 
 extras = {}
+
 extras["quality"] = ["ruff == 0.13.1"]
+
 extras["docs"] = []
 extras["test_prod"] = ["pytest>=7.2.0", "pytest-xdist", "pytest-subtests", "parameterized", "pytest-order"]
 extras["test_dev"] = [
@@ -36,6 +38,7 @@ extras["test_dev"] = [
 extras["testing"] = extras["test_prod"] + extras["test_dev"]
 extras["deepspeed"] = ["deepspeed"]
 extras["rich"] = ["rich"]
+
 extras["test_fp8"] = ["torchao"]  # note: TE for now needs to be done via pulling down the docker image directly
 extras["test_trackers"] = [
     "wandb",

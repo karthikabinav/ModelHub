@@ -49,6 +49,7 @@ extras["test_trackers"] = [
     "trackio",
 ]
 extras["dev"] = extras["quality"] + extras["testing"] + extras["rich"]
+
 extras["sagemaker"] = [
     "sagemaker",  # boto3 is a required package in sagemaker
 ]

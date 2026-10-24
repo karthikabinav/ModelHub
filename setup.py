@@ -1,16 +1,14 @@
-# Copyright (c) Meta Platforms, Inc. and affiliates.
-# This software may be used and distributed according to the terms of the Llama 2 Community License Agreement.
+"""ModelHub package setup.
+
+Original setup for the ModelHub research project.
+"""
 
 from setuptools import find_packages, setup
 
-
-def get_requirements(path: str):
-    return [l.strip() for l in open(path)]
-
-
 setup(
-    name="llama",
-    version="0.0.1",
+    name="modelhub",
+    version="0.1.0",
+    description="A simple framework to run LLMs",
     packages=find_packages(),
-    install_requires=get_requirements("requirements.txt"),
+    python_requires=">=3.10",
 )

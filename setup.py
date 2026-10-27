@@ -26,7 +26,6 @@ extras["test_dev"] = [
     "evaluate",
     "peft",
     "torchdata>=0.8.0",
-    "torchpippy>=0.2.0",
     "transformers",
     "scipy",
     "scikit-learn",
@@ -76,13 +75,13 @@ setup(
             "accelerate-merge-weights=accelerate.commands.merge:main",
         ]
     },
-    python_requires=">=3.10.0",
+    python_requires=">=3.11.0",
     install_requires=[
         "numpy>=1.17",
         "packaging>=20.0",
         "psutil",
         "pyyaml",
-        "torch>=2.0.0",
+        "torch>=2.6.0",
         "huggingface_hub>=0.21.0",
         "safetensors>=0.4.3",
     ],
@@ -95,30 +94,7 @@ setup(
         "License :: OSI Approved :: Apache Software License",
         "Operating System :: OS Independent",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
         "Topic :: Scientific/Engineering :: Artificial Intelligence",
     ],
 )
-
-# Release checklist
-# 1. Checkout the release branch (for a patch the current release branch, for a new minor version, create one):
-#      git checkout -b vXX.xx-release
-#    The -b is only necessary for creation (so remove it when doing a patch)
-# 2. Change the version in __init__.py and setup.py to the proper value.
-# 3. Commit these changes with the message: "Release: v<VERSION>"
-# 4. Add a tag in git to mark the release:
-#      git tag v<VERSION> -m 'Adds tag v<VERSION> for pypi'
-#    Push the tag and release commit to git: git push --tags origin vXX.xx-release
-# 5. Run the following commands in the top-level directory:
-#      make prepare_release
-# 6. Upload the package to the pypi test server first:
-#      make target=testpypi upload_release
-# 7. Check that you can install it in a virtualenv by running:
-#      make install_test_release
-#      accelerate env
-#      accelerate test
-# 8. Upload the final version to actual pypi:
-#      make target=pypi upload_release
-# 9. Add release notes to the tag in github once everything is looking hunky-dory.
-# 10. Go back to the main branch and update the version in __init__.py, setup.py to the new version ".dev" and push to
-#     main.
